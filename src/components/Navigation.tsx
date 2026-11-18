@@ -5,10 +5,11 @@ export function Navigation() {
     const itensLink = ['Home', 'Collection', 'About', 'Contact']
     return (
         <>
-            <nav>
+            <nav aria-label="Main navigation">
                 <ul>
                     {itensLink.map((item)=>{
-                        return <NavigationItem value={item} link={"/" + item} key={item}/>
+                        const link = item === "Home" ? import.meta.env.BASE_URL : "/" + item;
+                        return <NavigationItem value={item} link={link} key={item}/>
                     })}
                 </ul>
             </nav>

@@ -13,9 +13,9 @@ type ShoesCardProps = {
 
 export function ShoesCard(props: ShoesCardProps) {
   return (
-    <>
-      <div className="content-main">
+      <article className="content-main">
         <div className="content-left">
+          <p className="eyebrow">The original icon</p>
           <h1>{props.itemProps.title}</h1>
           <h2>{props.itemProps.subtitle}</h2>
           <p className="price">{props.itemProps.price}</p>
@@ -23,9 +23,9 @@ export function ShoesCard(props: ShoesCardProps) {
           <button>Add to cart</button>
         </div>
         <div className="content-right">
+          <span className="visual-glow" aria-hidden="true" />
           <img src={props.itemProps.srcImgShoes} alt={props.itemProps.altImageAcessibility} />
         </div>
-      </div>
-    </>
+      </article>
   );
 }
